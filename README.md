@@ -71,7 +71,7 @@ function read_dword(addr)
     end
 
     local result = string.byte(data, 1)
-    result |= string.byte(data, 2) << 8;
+    result |= string.byte(data, 2) << 8
     result |= string.byte(data, 3) << 16
     result |= string.byte(data, 4) << 24
 
