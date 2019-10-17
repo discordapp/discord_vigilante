@@ -70,12 +70,12 @@ function read_dword(addr)
         return nil
     end
 
-    local result = string.byte(data, 1);
+    local result = string.byte(data, 1)
     result |= string.byte(data, 2) << 8;
-    result |= string.byte(data, 3) << 16;
-    result |= string.byte(data, 4) << 24;
+    result |= string.byte(data, 3) << 16
+    result |= string.byte(data, 4) << 24
 
-    return result;
+    return result
 end
 
 function read_string(addr, max_size)
@@ -109,7 +109,7 @@ function get_presence()
 
     local client_end_addr = client_addr + client_size
 
-    if str_addr == nil
+    if str_addr == nil then
         local addr = Find("8D8F........8BD0680401", client_addr, client_end_addr)
         if addr == nil then
             return nil
